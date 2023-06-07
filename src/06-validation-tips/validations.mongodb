@@ -1,0 +1,40 @@
+use("p_store");
+
+db.getCollectionInfos();
+
+db.runCommand({
+  collMod: "users",
+  validator: {
+    $jsonSchema: {
+      bsonType: "object",
+      required: ["email", "password", "age", "role"],
+      additionalProperties: true,
+      properties: {
+        name: {
+          bsonType: "string",
+        },
+        last_name: {
+          bsonType: "string",
+        },
+        email: {
+          bsonType: "string",
+        },
+        password: {
+          bsonType: "string",
+          pattern: "^[A-Za-z0-9]{8,16}$",
+        },
+        age: {
+          bsonType: "number",
+          minimum: 18,
+          maximum: 199,
+        },
+        isSingle: {
+          bsonType: "bool",
+        },
+        role: {
+          enum: ["customer", "seller", "admin"],
+        },
+      },
+    },
+  },
+});
