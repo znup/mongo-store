@@ -1,0 +1,10 @@
+use("p_store");
+
+db.products.insertOne({
+  name: "Camisa Escocesa",
+  sizes: ["L", "M", "XL"],
+  category: {
+    name: "name category",
+    image: "image.png",
+  },
+});
