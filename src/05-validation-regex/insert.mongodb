@@ -3,7 +3,7 @@ use("p_store");
 db.users.insertOne({
   last_name: "Lopez",
   email: "lopez@lopez.com",
-  password: "lopez123",
+  password: "USER_PASSWORD_BD",
   age: 52,
   isSingle: false,
   role: "customer",
