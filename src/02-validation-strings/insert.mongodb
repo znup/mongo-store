@@ -1,0 +1,7 @@
+use("p_store");
+
+db.users.insertOne({
+  last_name: "Perez",
+  email: "perez@perez.com",
+  password: "perez",
+});
