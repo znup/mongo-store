@@ -1,0 +1,19 @@
+use("p_store");
+
+db.users.insertOne({
+  name: "Jhon",
+  email: "jhon@jhon.com",
+  password: "USER_PASSWORD_BD",
+  role: "seller",
+  social_accounts: ["vk, ig"],
+  address: {
+    street: "Str 188",
+    city: "WS",
+    zip: "77777",
+  },
+  shipping_address: {
+    street: "Str 12",
+    city: "WS",
+    zip: "77755",
+  },
+});

@@ -1,0 +1,7 @@
+use("p_store");
+
+db.users
+  .find({
+    "address.city": "NY",
+  })
+  .count();
