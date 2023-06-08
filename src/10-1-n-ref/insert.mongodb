@@ -1,0 +1,19 @@
+use("p_store");
+
+db.orders.insertOne({
+  user_id: ObjectId("64810b1c741cb79929343f82"),
+  name: "develop store",
+  date: "2022-12-12",
+  items: [
+    {
+      titlle: "Zapatos",
+      price: 850,
+      qty: 2,
+    },
+    {
+      titlle: "Cereales",
+      price: 90,
+      qty: 7,
+    },
+  ],
+});

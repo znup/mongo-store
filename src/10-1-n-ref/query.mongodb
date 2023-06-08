@@ -1,0 +1,20 @@
+use("p_store");
+
+db.orders.find({ user_id: ObjectId("64810b1c741cb79929343f82") }).count();
+db.orders.findOne({ _id: ObjectId("648109f57f2bda457c84142b") });
+
+db.orders.aggregate([
+  {
+    $match: {
+      _id: ObjectId("6481f40e1c570dcb1f3ef766"),
+    },
+  },
+  {
+    $lookup: {
+      from: "users",
+      localField: "user_id",
+      foreignField: "_id",
+      as: "user",
+    },
+  },
+]);
