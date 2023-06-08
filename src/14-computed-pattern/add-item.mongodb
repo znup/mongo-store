@@ -1,0 +1,18 @@
+use("p_store");
+
+db.orders.updateOne(
+  { _id: ObjectId("648228bd82943959ed611aea") },
+  {
+    $push: {
+      items: {
+        titlle: "Turkey - Breast, Double",
+        price: 26.64,
+        qty: 7,
+        product_id: ObjectId("64821371f0d9ecefd02974ee"),
+      },
+    },
+    $inc: {
+      total: 26.64 * 7,
+    },
+  }
+);
