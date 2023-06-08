@@ -1,0 +1,4 @@
+use("p_store");
+
+db.products.find();
+db.orders.findOne({ _id: ObjectId("648224daabb4107d788d5381") });

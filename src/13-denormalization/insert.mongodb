@@ -1,0 +1,21 @@
+use("p_store");
+
+db.orders.insertOne({
+  user_id: ObjectId("64810b1c741cb79929343f82"),
+  name: "develop store",
+  date: "2022-12-12",
+  items: [
+    {
+      titlle: "Squid - U 5",
+      price: 65,
+      qty: 1,
+      product_id: ObjectId("64821371f0d9ecefd02974ed"),
+    },
+    {
+      titlle: "Turkey - Breast, Double",
+      price: 26.64,
+      qty: 3,
+      product_id: ObjectId("64821371f0d9ecefd02974ee"),
+    },
+  ],
+});
